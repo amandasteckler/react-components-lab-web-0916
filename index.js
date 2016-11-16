@@ -75,18 +75,26 @@ class ButcherShop extends React.Component {
       React.createElement(
         'ul',
         {},
-        BUTCHER_PRODUCTS.map(product =>
-          React.createElement(
+        BUTCHER_PRODUCTS.map(function(product) {
+          return React.createElement(
             'li',
             {},
             product
           )
-        )
+        })
       )
       ]
     )
   }
 }
+
+class Button extends React.Component {
+  render() {
+    return React.createElement('button', {}, 'Click me!');
+  }
+}
+
+
 
 ReactDOM.render(
   React.createElement('div', {}, [
